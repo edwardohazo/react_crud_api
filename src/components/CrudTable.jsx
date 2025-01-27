@@ -17,7 +17,8 @@ const CrudTable = ({data, setDataToEdit, deleteData}) => {
                 </tr>
             </thead>
             <tbody>
-                {data.santos.length > 0 ?
+            { data.santos ? 
+                (data.santos.length > 0 ?
                  data.santos.map((el)=> 
                 <CrudTableRow 
                 key={el.id} 
@@ -25,7 +26,8 @@ const CrudTable = ({data, setDataToEdit, deleteData}) => {
                 setDataToEdit={setDataToEdit} 
                 deleteData={deleteData}/>
                 ) : <tr><td colSpan="3">Sin Datos</td></tr> 
-                }
+            ) : <tr><td colSpan="3">Sin Datos</td></tr> 
+            }  
             </tbody>
         </table>
     </div>
