@@ -1,0 +1,10 @@
+/* eslint-disable no-unused-vars */
+import React from 'react'
+import './Loader.css';
+
+export const Loader = () => {
+  return (
+    <div className="lds-dual-ring">
+    </div>
+  )
+}
